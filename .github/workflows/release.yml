@@ -22,13 +22,15 @@ jobs:
         with:
           distribution: temurin
           java-version: "21"
-          cache: gradle
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
 
       - name: Ensure gradlew executable
         run: chmod +x ./gradlew
 
       - name: Build plugin distribution
-        run: ./gradlew clean buildPlugin
+        run: ./gradlew buildPlugin
 
       - name: Collect distribution artifact
         run: |
