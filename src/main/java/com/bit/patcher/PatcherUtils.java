@@ -116,10 +116,10 @@ public class PatcherUtils {
      * @param textFieldWithBrowseButton 保存路径的文本框
      */
     public static void setDavePathDefault(TextFieldWithBrowseButton textFieldWithBrowseButton) {
-        // 获取桌面路径
-        String desktopPath = System.getProperty("user.home") + File.separator + "Desktop";
+        // 获取下载路径
+        String downloadPath = System.getProperty("user.home") + File.separator + "Downloads";
         // 设置文本框的默认值
-        textFieldWithBrowseButton.setText(desktopPath);
+        textFieldWithBrowseButton.setText(downloadPath);
     }
 
     /**
